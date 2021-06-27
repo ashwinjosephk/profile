@@ -1,6 +1,6 @@
 import cv2
 
-img_location = '../img/qc-snpe-logo.jpeg'
+img_location = '../img/ceva_neurpro_icon.png'
 img = cv2.imread(img_location, cv2.IMREAD_UNCHANGED)
  
 print('Original Dimensions : ',img.shape)
