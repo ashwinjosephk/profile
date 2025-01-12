@@ -2,907 +2,315 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143369173-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Ashwin Joseph Kurian - Roboticist, AI Enthusiast, Developer. Explore my experience in AI, machine learning, robotics, and projects." />
+  <meta name="keywords" content="Robotics, AI, Machine Learning, SLAM, Vision Language Models, Robotics Portfolio, Ashwin Joseph Kurian" />
+  <meta name="author" content="Ashwin Joseph Kurian" />
+  <title>Ashwin Joseph Kurian | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
 
-  gtag('config', 'UA-143369173-1');
-</script>
+    .hero {
+      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+      color: #333;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/png" href="/favicon.png"/>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
 
-  <title>Personal Portfolio</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+    .hero p {
+      font-size: 1.2rem;
+    }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    .section-title {
+      margin: 40px 0 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #007bff;
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    .card {
+      margin-bottom: 20px;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
+    .skills .progress-bar {
+      background-color: #007bff;
+    }
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    .social-icons a {
+      color: #007bff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
 
-    gtag('config', 'UA-169007209-3');
-  </script>
+    footer {
+      background: #ffffff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    }
 
+    .fade-in {
+      transition: opacity 0.5s ease-in-out;
+    }
 
+    .fade-in:hover {
+      opacity: 0.7;
+    }
 
-  <!-- =======================================================
-  * Template Name: Personal - v2.1.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider {
+      margin: 20px auto;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .slider img {
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+      transition: transform 0.5s ease;
+    }
+  </style>
 </head>
 
 <body>
-  
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-
-    <div class="container">
-      <!-- <div class="col-lg-4" data-aos="fade-right"> -->
-        <!-- <img src="assets/img/me.jpg" class="img-fluid" alt=""> -->
-      <!-- </div> -->
-      <h1 style="color:#9d1c1c">Ashwin Joseph</a></h1>
-      <h2 style="color:#fff">I'm a <span class="typing" style="color:#12D640"></span></h2>
-      <h2 style="color:#fff"> Hey welcome to my profile. Feel free to click on the various Tabs that interests you below to know more about me! </h2>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          
-          <li class="active"><a href="#about"><span>About</span></a></li>
-          <li><a href="#education"> <span>Education</span></a></li>
-          <li><a href="#experience"> <span>Experience</span></a></li>
-<!--          <li><a href="#projects"> <span>Projects</span></a></li>-->
-          <li><a href="#portfolio"> <span>Projects</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
-
-          <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
-          <li><a href="#contacts"> <span>Contact</span></a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
-
-
-    
-      
-
-      <div class="social-links">
-          <a href="https://www.linkedin.com/in/ashwinjoseph" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.github.com/ashwinjoseph95" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="mailto:josephashwinkurian@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-
-      </div></div>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>I am currently pursuing my second Masters in Robotics at RWTH University, Aachen, Germany. I spent a major part of my life in Dubai before relocating to India for pursuing Engineering.
-
- My journey toward professional excellence began with a Bachelor's degree in Engineering from Mahatma Gandhi University, Kottayam, Kerala and a Master's degree in Computer Science with specialization in Machine Intelligence from the Indian Institute of Information Technology (IIITM-K) and Management, Trivandrum, India. I completed my schooling from the Indian High School, Dubai, United Arab Emirates. I was working as a Senior AI and Machine Learning Engineer at Ignitarium Technology Solutions and as a Consultant for AI at Sony India Software Centre, Bangalore.
-<br> 
-I am a great fan of technology with interests in Robotics, Manufacturing, Artificial Intelligence, and Autonomous Systems and Vehicles. My aim is to devise and execute solutions that will shape the future.
-<br>
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-    
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Aachen, Germany</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> josephashwinkurian@gmail.com</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- End About Me -->
-
-    <!-- ======= Interests ======= -->
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
-            <h3>Software Development</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #5578ff;"></i>
-            <h3>Machine Learning</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-camera-3-line" style="color: #e80368;"></i>
-            <h3>Computer Vision</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-english-input" style="color: #1c7d32;"></i>
-            <h3>Natural Language Processing</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
-            <h3>Robotics</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
-            <h3>Time Series Analysis</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h3>Algorithms</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-image-line" style="color: #ffc107;"></i>
-            <h3>Image Processing</h3>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- End Interests -->
-  </section><!-- End About Section -->
-
-
-
-  <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Education</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
-
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/rwth.jpeg" class="img-fluid" alt="">
-              <!-- <h4 style="text-align:left;"><a href="https://ahduni.edu.in/" target="_blank" style="color:#12d640">MG University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>MSc in Robotics Systems Engineering</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">September 2022 - Present</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-
-                <li>Linear Control Systems</li>
-                <li>Advanced Robotics Kinematics and Dynamics</li>
-                <li>Automated and Connected Driving Challenges</li>
-  
-              </ul>
-            </div>
-
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/mgu.png" class="img-fluid" alt="">
-              <!-- <h4 style="text-align:left;"><a href="https://ahduni.edu.in/" target="_blank" style="color:#12d640">MG University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>B.Tech. in Mechanical Engineering</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">July 2013 - May 2017</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-                <!-- <li>Data Structures &amp; Algorithms</li> -->
-                <li>Machine Design and CAD</li>
-                <!-- <li>Operating Systems</li> -->
-                <li>Fluid and Hyraulic Machines</li>
-                <li>Gas Dynamics and Jet Propulsion</li>
-                <li>Thermodynamics and IC Engines</li>
-                <!-- <li>Computer Vision</li> -->
-              </ul>
-            </div>
-
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/IIITMK.jpg" class="img-fluid" alt="">
-              <!-- <h4 style="text-align:left;"><a href="https://www.asu.edu/" target="_blank" style="color:#12d640">Arizona State University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>MS in Computer Science (Machine Intelligence)</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">June 2017 - May 2019</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-                <li>Machine Learning, Data Analytics and AI</li>
-                <li>Computer Networking</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Operating Systems</li>
-              </ul>
-            </div>
-
-            
-
-          </div>
-        </div>
-      </div>
-
-
-    <div class="portfolio">
-    <div class="container">
-      <div class="section-title">
-        <h2>Online Certification</h2>
-      </div>
-
-      <div class="row portfolio-container" style="position: relative; height: 437.75px;">
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/udemy.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Machine Learning</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/2BTJ636Q2E93?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-           </div>
-          </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/kba.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Blockchain Foundation Program</h4>
-              <div class="portfolio-links">
-                <a href="https://verify.kba.ai/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/udacity-logo.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Introduction to Self-Driving Cars Nanodegree</h4>
-              <div class="portfolio-links">
-                <a href="https://coursera.org/share/98bbfb990484fac370d5e5ed14334ea4" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 0px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/tf.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Deep Learning with Tensorflow</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1FSwPt19EzY_tpvqkE6igtLf3gccKcssC/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/udemy.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Machine Learning with Python</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1gimySw_NPzCJ54dqZ2j2wYyz-JDOg-S0/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/dai.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Neural Networks and Deep Learning</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/ELXZ6FE2BU7X?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
-
-  </section>
-  <!-- End Education Section -->
-
-
-
-  <!-- Start Experience Section -->
-
-  <section id="experience" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Experience</h2>
-      </div>
-      <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">RWTH Aachen University</a><br> </h4>
-                <h5 style="text-align:left;">November 2022 - Present</h5>
-                <p style="text-align:left;color:#fff"><em>Research Assitant- AI </em></p>
-                <ul style="text-align:left;">
-                  <li>I am contributing towards the preparation of Curriculum and practical exercises related to Computer Vision and Machine Learning for Master’s degree students in the Institute of Highway Engineering at RWTH University. Work involved utilizing Pytorch with Python in the fileds of NNs, CNNs and Transfer Learning.</li>
-                  <li>Predicting flow of traffic on a Multilane Highway.</li>
-                  <li>Processing 3D point clouds of Highway captured on a Drone using Python and utilizing tools like QGis and CloudCompare.</li>
-                </ul>
-              </div>
-
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Sony India Software Centre, Bangalore (Deputation)</a><br> </h4>
-                <h5 style="text-align:left;">May 2021 - July 2022</h5>
-                <p style="text-align:left;color:#fff"><em>Consultant- AI </em></p>
-                <ul style="text-align:left;">
-                  <li>Responsible for supporting the Sony Tokyo (Japan) team and deployment of AI-based applications onto Sony's Electronic Gadgets.</li>
-                  <li>Worked in the Platform Implemetation Team</li>
-                  <li>Got to work closely with Engineers from Qualcomm and Sony.</li>
-                  <li>Using C++ and Python for software development.</li>
-                  <li>Received the Spot Award for contributions in AI/ML activities in the GPULIB Development Project.</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.augmenify.com/" style="color:#12d640">Ignitarium Technology Solutions</a><br> </h4>
-                <h5 style="text-align:left;">June 2019 - Present</h5>
-                <p style="text-align:left;color:#fff"><em>Senior Engineer- AI and Cloud</em></p>
-                <ul style="text-align:left;">
-                  <li>Developing GUI for applications using PyQT5 and Tkinter</li>
-                  <li>Utilizing State of the art and Custom networks for obstacle classification along railway tracks.</li>
-                  <li>Attire detection platform, which does real-time video analytics, that helps to ensure PPE of construction/Lab/Factory workers.</li>
-                  <li> Customization of neural network architectures that are lightweight for deployment on micro-controllers.</li>
-                  <li>Utilizing Deep Learning and Image Processing techniques for detection and classification of Jointbars along Railway Tracks.</li>
-                  <li>Have represented the company for project demonstration at Maker Village, Cochin that was attended by Mr. Sanjay Dhotre, Minister of State for Human Resource Development, Communications and Electronics and Information Technology, Government of India.</li>
-                  <li>Received Team Spark award at the Annual Event held virtually on November 2020 for the teamwork and contribution towards completing the projects exceeding quality targets and keeping schedule.</li>
-                  <li>Wrote technical blogs for publishing on the company website for marketing activities <br>
-The blogs can be viewed at the following links:<br>
-* <a href="https://ignitarium.com/ai-driven-face-mask-and-attire-detection-for-the-new-normal/" target="_blank"><i class="bx bx-link"> AI-driven Face Mask and Attire Detection for the new normal</i></a><br>
-* <a href="https://ignitarium.com/footwear-defect-detection-using-vision-intelligence-systems/" target="_blank"><i class="bx bx-link"> Footwear defect detection using Vision Intelligence Systems</i></a><br>
-* <a href="https://community.nasscom.in/communities/emerging-tech/footwear-defect-detection-using-vision-intelligence-systems" target="_blank"><i class="bx bx-link"> FOOTWEAR DEFECT DETECTION USING VISION INTELLIGENCE SYSTEMS</i></a><br>
-* <a href="https://ignitarium.com/light-weight-people-detection-on-microcontrollers-using-custom-neural-networks" target="_blank"><i class="bx bx-link"> Light-weight People Detection on Microcontrollers using Custom Neural Networks</i></a><br>
-
-
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">OpenFive Technologies (Deputation)</a><br> </h4>
-                <h5 style="text-align:left;">Dec 2020 - Mar 2021</h5>
-                <p style="text-align:left;color:#fff"><em>ML Contractor </em></p>
-                <ul style="text-align:left;">
-                  <li>Deputed from Ignitarium Technologies on contract (remote) at OpenFive (SiFive Group, US). The various tasks involved:</li>
-<li> Help in the porting of custom neural networks onto FPGA using simulators and emulators.</li>
-<li> Support the newly formed AI team at OpenFive India with the KT Sessions from their offshore team based out of Taiwan.</li>
-<li> Testing custom neural networks developed by OpenFive R&D for accuracy with other standard neural networks. Carrying out tests to ensure 32 bit, 16 bit, and 8-bit quantized models from the simulator yield the same results.</li>
-<li> Successfully deployed 3 custom real-world applications and showcased the demo to convince them of their products capabilities.</li>
-<li> Carry out benchmarking activities for Inference latency and End-to-end latency.</li>
-<li> Provide insight into the theoretical aspects of evaluation metrics to be used for evaluating neural network performance.</li>
-<li> Explore and use custom Tool from CEVA named LiteML for pruning and optimizing neural networks that helped to deploy NN models more effectively.</li>
-<li> Worked on Python scripting for automating tasks.</li>
-                </ul>
-                Case Study titled 'Custom DNN Deployment on AI Hardware Accelerator' co- authored by me on this project can be read online at <a href="https://ignitarium.com/software/ai_ml/" target="_blank"><i class="bx bx-link"> Custom DNN Deployment on AI Hardware Accelerator</i></a><br>
-              </div>
-
-          </div>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/img/my_profile_photo.png" alt="Ashwin Joseph Kurian" class="profile-img">
+    <h1>Ashwin Joseph Kurian</h1>
+    <p>Roboticist | AI Enthusiast | Developer</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/ashwinjoseph" target="_blank" class="fade-in"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ashwinjoseph95" target="_blank" class="fade-in"><i class="fab fa-github"></i></a>
+      <a href="mailto:josephashwinkurian@gmail.com" class="fade-in"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/ashwinjosephk/" target="_blank" class="fade-in"><i class="fab fa-instagram"></i></a>
     </div>
   </section>
 
-  <!-- End Experience Section -->
-
-  <!-- Start Experience Section -->
-
-  <section id="portfolio" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Portfolio</h2>
-      </div>
-      <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
+  <!-- About Section -->
+  <section class="container my-5">
+    <h2 class="section-title">About Me</h2>
+    <p>As a soon-to-graduate M.Sc. Robotic Systems Engineering student at RWTH Aachen University, I bring a unique blend of academic excellence and industry experience in AI, machine learning, and robotics. My background includes cutting-edge AI development at Sony India Software Center and Ignitarium Technology Solutions, as well as consultancy work at the German Aerospace Center (DLR). With a strong foundation in autonomous systems and intelligent technologies, I am now seeking challenging roles where I can apply my expertise to drive innovation in robotics and AI.</p>
+  </section>
 
 
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">
-                Implement trajectory for Welding Tip mounted on a UR10e Cobot (Undergoing at IGMR, RWTH, Aachen)</a><br> </h4>
-              <h5 style="text-align:left;">July 2023 </h5>
-              
-              <ul style="text-align:left;">
-                
-                The task was to integrate ROS packages for webcam, Moveit (collision avoidance), AR tags (tracking), and an Action Server to process path requests for a welding tip on a UR10e cobot from Universal Robotics at the IGMR Institute, RWTH Aachen University. Utilized ROS and Python for the project.
-              
-              </ul>
-            </div>
-
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">3D Point Cloud Processing of a Multilane Highway / Autobahn (Undergoing at ISAC - Institute of Highway Engineering, RWTH, Aachen)</a><br> </h4>
-              <h5 style="text-align:left;">June 2023 - Present</h5>
-              
-              <ul style="text-align:left;">
-                
-                Processing 3D point clouds of Highway captured on a Drone using Python (open3D and laspy) and utilizing tools like QGis and CloudCompare.
-              
-              </ul>
-            </div>
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Case Study for setting up a Battery manufacturers factory (Undergoing at RWTH, Aachen) </a><br> </h4>
-              <h5 style="text-align:left;">May 2023 - Present</h5>
-              
-              <ul style="text-align:left;">
-                
-                Doing a case study to analyze the objectives, strategic goals, area and location selection, planning of layout and capacity keeping in mind about making the plant highly flexible to cater to future growth plans.
-              
-              </ul>
-            </div>
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Traffic Prediction on Multilane Highway (Done at ISAC - Institute of Highway Engineering, RWTH, Aachen)</a><br> </h4>
-              <h5 style="text-align:left;">May 2023 - May 2023</h5>
-              
-              <ul style="text-align:left;">
-                
-                Used python and Machine Learning for analyzing traffic flow on a Multilane Highway taking into account position, velocities and accelerations of multiple automobiles. A custom dataset was used for this project.
-              
-              </ul>
-            </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Porting AI applications to OnnxRuntime (Done at Sony India, Bangalore)</a><br> </h4>
-                <h5 style="text-align:left;">Dec 2021 - Feb 2022</h5>
-                
-                <ul style="text-align:left;">
-                  
-                    Worked on benchmarking and experimenting/ comparison of performance and utility of Vendor's Deployment Tool(Qualcomm SNPE) with open-source alternatives like OnnxRuntime fordeployment onto Qualcomm Snapdragon chipsets. The task involved loading onnx modelsand inference results on inputs using C++ code and cross-compilation of OpenCV.
-                
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Deployment of Camera Modules on Qualcomm chipsets (Done at Sony India, Bangalore)</a><br> </h4>
-                <h5 style="text-align:left;">May 2021 - July 2022</h5>
-                
-                <ul style="text-align:left;">
-                  
-                  Worked on development, optimization (Quantization), memory profiling and deployment ofAI-based modules for Smartphone Camera onto Qualcomm Snapdragon chipsets. Workedon applications related to Image Super-resolution (GANs), object detection, image whitebalance correction and image classifiers. Task involved communication with R&D Engineersfrom Sony and Qualcomm.
-                  Worked with Pytorch, Nnabla, Qualcomm SNPE and utilized Python for the Task.
-                
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.augmenify.com/" style="color:#12d640">
-                  Custom Pose Detector and Classifier for Health industry (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Apr 2021 - May 2021</h5>
-                
-                <ul style="text-align:left;">
-                  Developing Custom Pose Detector and Classifier for Health industry utilizing Tensorflow Posenet.
-
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  Voice Command Engine- Septra (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Oct 2020 - Jan 2021</h5>
-                
-                <ul style="text-align:left;">
-                  Utilized Audio Processing and Deep Learning techniques for developing Voice Activity Detectors,Voice classifiers, and denoisers for developing a Voice Command Engine to be deployed onMicrocontrollers from Renesas. Worked on Speech synthesis APIs for speech data augmentation.
-                    Worked on the Tasks with Python and Tensorflow 2.
-                    The marketing video for the same can be viewed at <a href="https://www.linkedin.com/posts/ignitarium_easy-days-with-septra-by-ignitarium-activity-6724191311806783489-aiqG/" target="_blank"><i class="bx bx-link"> Easy Days with Septra</i></a><br>
-     
-                </ul>
-              </div>
-              
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  Jointbar Detection on Railway Tracks (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Jul 2020 - Sep 2020</h5>
-                
-                <ul style="text-align:left;">
-                  Worked on a Predictive maintenance project that analyzed Footage from IR Depth Camerasfor
-                    object detection and classification of faulty Joints Bars along Railway Tracks to improvepassenger safety. Worked on Docker containers for packaging the solution and Python and Tensorflow 2 for development.
-      
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    Mask and Attire Detection (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">May 2020 - Jun 2020</h5>
-                
-                <ul style="text-align:left;">
-                  Worked on an Attire detection application, which does real-time video analytics, that helps toensure the attire
-                    of construction/Lab/Factory workers for granting entry access using poseestimation (Posenet), object detection, and classification neural networks. The project was deployedremotely onto a Nvidia Jetson.
-                    Worked on Python and Tensorflow 1 for the task.
-                    The demo video for the same can be viewed at <a href="https://www.youtube.com/watch?v=6wZCcLAozNU" target="_blank"><i class="bx bx-link"> AI-based Protective Gear Detection Platform</i></a><br>
-                    The blog on the same can be found at <a href="https://ignitarium.com/ai-driven-face-mask-and-attire-detection-for-the-new-normal/" target="_blank"><i class="bx bx-link"> AI-driven Face Mask and Attire Detection for the new normal</i></a><br>
-                    This blog was also published on the website of Indian Electronics and Semiconductor Association and can be read at <a href="https://iesaonline.org/buzz/ai-driven-face-mask-and-attire-detection-for-the-new-normal" target="_blank"><i class="bx bx-link"> AI-driven Face Mask and Attire Detection for the new normal</i></a><br>
-                    
-      
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  Person Detection (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Apr 2020 - May 2020</h5>
-                
-                <ul style="text-align:left;">
-                  The project's aim was to identify presence of humans using Computer Vision technique in the nearby vicinity (within 3 meter radius) at real time and sending signal for activating a particular device. The project was to be deployed on an Embedded System board and various constraints were to be dealt with requiring customization of deep neural networks. The demo video for the same is available in the link as follows:  <a href="https://www.youtube.com/watch?v=KNO34ZN-SPg" target="_blank"><i class="bx bx-link"> DEMO light person</i></a><br>
-      
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  
-                  Obstacle Classification on Railway Tracks (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Dec 2019 - Mar 2020</h5>
-                
-                <ul style="text-align:left;">
-                  The project was implemented for classification of obstacles at Railway Tracks for a U.S based private equipment company. It involved utilizing Image Enhancement algorithms and different Classifier networks on images provided for improving evaluation metrics of the obstacle classification process. My role was to try out various network architectures and evaluate performance as well as to build a GUI for the same. The project was implemented in Python 3 utilizing the Tensorflow framework.
-      
-                </ul>
-              </div>
-
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  
-                  
-                    Image based Automatic Defect Detection of Footwear Raw Materials at production Line (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Dec 2018 - Nov 2019</h5>
-                
-                <ul style="text-align:left;">
-                  Worked on Defect Detection and Texture identification of footwear raw materials utilizing image.
-                    Processing algorithms and semantic segmentation to identify features of interest. Contributed indeploying a SQL database for storage and data analysis.
-                    Worked on Python, C++, Tensorflow 1, Image Processing (OpenCV), PyQT5 (UI Design tool) andSQL for the task.
-                    The demo video for the same is available at: <a href="https://www.youtube.com/watch?v=qLblE6wBiDM" target="_blank"><i class="bx bx-link"> Defect Detection for Footwear</i></a><br>
-                    
-                   The blog on the same was published on NASSCOM's (NASSCOM is the industry association for the IT and IT-enabled products and services sector in India) website and is available at:  <a href="https://community.nasscom.in/communities/emerging-tech/footwear-defect-detection-using-vision-intelligence-systems" target="_blank"><i class="bx bx-link"> FOOTWEAR DEFECT DETECTION USING VISION INTELLIGENCE SYSTEMS</i></a><br>
-                   
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  
-                  
-                  Determining Use Case of Z Force Neonode Airbar Sensor (Done at Ignitarium, Kochi)</a><br> </h4>
-                <h5 style="text-align:left;">Dec 2018 - Dec 2018</h5>
-                
-                <ul style="text-align:left;">
-                  The Project involved setting up the sensor and using its SDK to establish a use case. I was able to create a use case involving drawing live onscreen using coordinates from fingertips. The demo video for the same is available at:  <a href="https://www.youtube.com/watch?v=ZRwrD2Ev-SU" target="_blank"><i class="bx bx-link"> Neonode ZForce Airbar Application</i></a><br>
-      
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  
-                  
-                  
-                  Android Application for Shopping Cart (Done at IIITMK, Trivandrum)</a><br> </h4>
-                <h5 style="text-align:left;">Aug 2018 - Nov 2018</h5>
-                
-                <ul style="text-align:left;">
-                  The project involved creating a shopping cart, on Android Platform which had features like searching for products in the supermarkets within a specific radius of the location specified, adding the items to cart, showing offers as well as ordering. The team comprised of me and two other colleagues of mine. 
-      
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  
-                  
-                  
-                  
-                  Predictive Maintenance utilizing Image Processing Techniques (Done at IIITMK, Trivandrum)</a><br> </h4>
-                <h5 style="text-align:left;">Jan 2018 - Apr 2018</h5>
-                
-                <ul style="text-align:left;">
-                  The work was an attempt to develop a computer aided detection system using sophisticated image processing techniques to help monitor different regions of a factory site/ workshop for regions with high temperatures beyond normal which often is an indication of overrun machinery, faulty electrical connections or at worst a fire breakout and would have assisted in real time predictive maintenance system that could save factories a good amount of money per year.
-      
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">
-                  
-                    
-                  
-                  
-                  
-                  
-                  Biomimetic Bullet Proof Armour (Done at AJCE, Kanjirapally)</a><br> </h4>
-                <h5 style="text-align:left;">Nov 2016 - Apr 2017</h5>
-                
-                <ul style="text-align:left;">
-                  Conventional composite armours rely on the superior properties of composite laminates to effectively stop projectiles. Recently, there has been an increasing interest in new designs for armours, that do not rely on material properties alone. In this study, a novel geometry for high velocity impact protection has been proposed, that consists of multiple layers of different materials with specific properties, and has been inspired from the structure of a woodpecker’s head and armadillo armour. The behaviour of the same under the impact of a cylindrical projectile of 9 mm diameter and a velocity of 750 m/s has been studied using numerical methods in order to determine the optimum combination of different materials to be used. A comparison of the same with conventional multiple plate geometry shows that the bio mimetic armour performs considerably better than the latter, in terms of specific performance criteria.
-      
-                </ul>
-              </div>
-
-
-
-
+  <!-- Education Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Education</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">RWTH Aachen University</h5>
+            <p class="card-text">MSc in Robotics Systems Engineering<br>2022 - Present</p>
           </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">IIITM-K, Trivandrum</h5>
+            <p class="card-text">MSc in Computer Science (Machine Intelligence)<br>2017 - 2019</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mahatma Gandhi University</h5>
+            <p class="card-text">BTech in Mechanical Engineering<br>2013 - 2017</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- End Experience Section -->
-
-
-
-
-  <!-- Start Skills Section -->
-
-  <section id="skills" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Experience</h2>
-      </div>
-      <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Domains worked on</a><br> </h4>
-
-              <ul style="text-align:left;">
-                <li>Deep Learning</li>
-                <li>Machine Learning</li>
-                <li>Computer Vision</li>
-                <li>Natural Language Processing</li>
-                <li>Time Series Forecasting</li>
-                <li>Image Processing</li>
-                <li>Audio Processing</li>
-                <li>Point Cloud Processing</li>
-                <li>GUI development</li>
-                <li>Platform Deployment (Qualcomm, Nvidia, Renesas, Docker)</li>
-                <li>Neural Network Optimization (Quantization)</li>
-
-              </ul>
-            </div>
-
-
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Industries for which projects have been deployed</a><br> </h4>
-
-              <ul style="text-align:left;">
-                <li>Manufacturing</li>
-                <li>Predictive Maintenance</li>
-                <li>Healthcare</li>
-                <li>Construction</li>
-                <li>Multiple OEMs of Electronic Gadgets,</li>
-                <li>Embedded Systems boards</li>
-
-              </ul>
-            </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#12d640">Programming Languages</a><br> </h4>
-
-                <ul style="text-align:left;">
-                  <li>Python</li>
-                  <li>C++</li>
-
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.augmenify.com/" style="color:#12d640">Frameworks and Libraries</a><br> </h4>
-
-                <ul style="text-align:left;">
-                  <li>Keras, </li>
-                  <li>TensorFlow 2(Certified by Tensorflow- Google), </li>
-                  <li> Pytorch, </li>
-                  <li>Caffe, </li>
-                  <li>Scikit-Learn, </li>
-                  <li>OpenCV, </li>
-                  <li>CEVA Liteml,</li>
-                  <li> Dialogflow</li>
-                  <li> Sony Neural Network Console (NNC)</li>
-                  <li> Laserpy</li>
-                  <li> Open3D</li>
-
-
-
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">Version Control Tools</a><br> </h4>
-
-                <ul style="text-align:left;">
-                  <li>Github,</li>
-                  <li> GitLab,</li>
-                  <li> Gitee, </li>
-                  <li>Gerrit.</li>
-
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">Deployment Tools</a><br> </h4>
-
-                <ul style="text-align:left;">
-                  <li>ROS Neotic</li>
-                  <li>Docker</li>
-                  <li> Qualcomm SNPE Toolbox</li>
-                  <li> Qualcomm QNN SDK, </li>
-                  <li>CEVA Network Generator</li>
-                  <li> Android Debugger Bridge(ADB)</li>
-                  <li>Renesas E-AI Translator</li>
-                  <li>Website hosting (GoDaddy)</li>
-                  <li>Google Cloud Platform</li>
-                  <li>OnnxRuntime with NNAPI EP</li>
-                  <li>Quantum GIS</li>
-                  <li>Cloud Compare</li>
-
-
-                </ul>
-              </div>
-
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">Project Management and Team Collaboration Tools</a><br> </h4>
-
-                <ul style="text-align:left;">
-                  <li>Jira</li>
-                  <li> Confluence</li>
-                  <li> Qualcomm QNN SDK, </li>
-                  <li> Openproject</li>
-
-
-
-                </ul>
-              </div>
-
-
+  <!-- Experience Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Experience</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">German Aerospace Center (DLR)</h5>
+            <p class="card-text">Master Thesis- Robotics<br>Worked on multi-sensor data fusion, Vision Language Models, and evaluating SLAM algorithms using GNSS, stereo cameras, and LIDAR.</p>
           </div>
         </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Sony India Software Center</h5>
+            <p class="card-text">Consultant - AI<br>Deployed AI-based camera modules for Sony Android devices and developed mock models for benchmarking on Qualcomm hardware.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ignitarium Technology Solutions</h5>
+            <p class="card-text">Senior Engineer - AI<br>Worked on predictive maintenance, defect detection, and real-time video analytics for manufacturing and railway safety applications.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">OpenFive Technologies</h5>
+            <p class="card-text">ML Contractor<br>Ported custom neural networks onto FPGA, optimized neural networks using CEVA LiteML, and carried out performance benchmarking for real-world applications.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- End Skills Section -->
+  <!-- Skills Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+      <li>Programming Languages: Python, C++</li>
+      <li>Frameworks and Libraries: TensorFlow, PyTorch, Caffe, NNabla</li>
+      <li>Development Tools: ROS, Docker, OnnxRuntime, Qualcomm SNPE and QNN SDK, CEVA LiteML, AWS EC2, AWS SageMaker, AWS S3, Heroku</li>
+      <li>Simulators: CARLA, Universal Robot Simulator, CoppeliaSim</li>
+      <li>OS and Cloud: Linux (Ubuntu, Fedora), Windows, AWS Cloud</li>
+      <li>Specialties: Vision Language Models, SLAM, NLP, Computer Vision, Time Series Analysis</li>
+    </ul>
+  </section>
 
-
-
-
-
-
-
-  <!-- Start Contact Section -->
-
-  <section id="contacts" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-
-      <div class="row mt-2">
-
-
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/ashwinjoseph" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://www.github.com/ashwinjoseph95" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-              <a href="mailto:josephashwinkurian@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
-
-            </div>
+  <!-- Projects Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Projects</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Lidar and Camera Fusion</h5>
+            <p class="card-text">Developed a system to detect dynamic objects in lidar point clouds using RGB images for inland waterway navigation, integrating data using ROS.</p>
           </div>
         </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email</h3>
-            <p>josephashwinkurian@gmail.com</p>
-            <p>ashwin.joseph.kurian@rwth-aachen.de</p>
-            <p>ashwin.joseph@iiitmk.ac.in</p>
-            
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Trajectory Prediction</h5>
+            <p class="card-text">Analyzed traffic flow on multilane highways using machine learning models and custom datasets.</p>
           </div>
         </div>
-
       </div>
-      <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Voice Command Engine</h5>
+            <p class="card-text">Developed a Voice Command Engine utilizing audio processing and deep learning techniques for deployment on microcontrollers. Worked on speech data augmentation and synthetic APIs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Defect Detection in Footwear</h5>
+            <p class="card-text">Created a defect detection system for footwear raw materials using image processing and semantic segmentation, improving quality control processes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Predictive Maintenance for Railways</h5>
+            <p class="card-text">Designed a predictive maintenance system for railways using deep learning and IR depth cameras to identify faults in joint bars along tracks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Deployment of AI Camera Modules</h5>
+            <p class="card-text">Led deployment of AI modules on Qualcomm Snapdragon chipsets for applications like image super-resolution, object detection, and white balance correction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Welding Tip Trajectory Planning</h5>
+            <p class="card-text">Implemented ROS packages for collision avoidance and path requests for a welding tip mounted on a UR10e cobot at RWTH Aachen University.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- End Contact Section -->
+  <!-- Publications Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Publications</h2>
+    <ul>
+      <li><a href="https://ignitarium.com/ai-driven-face-mask-and-attire-detection-for-the-new-normal" target="_blank">AI-driven Face Mask and Attire Detection for the New Normal</a></li>
+      <li><a href="https://ignitarium.com/footwear-defect-detection-using-vision-intelligence-systems" target="_blank">Footwear Defect Detection Using Vision Intelligence Systems</a></li>
+      <li><a href="https://community.nasscom.in/communities/emerging-tech/footwear-defect-detection-using-vision-intelligence-systems" target="_blank">FOOTWEAR DEFECT DETECTION USING VISION INTELLIGENCE SYSTEMS</a></li>
+      <li><a href="https://ignitarium.com/light-weight-people-detection-on-microcontrollers-using-custom-neural-networks" target="_blank">Light-weight People Detection on Microcontrollers Using Custom Neural Networks</a></li>
+    </ul>
+  </section>
 
-  
-<!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/vendor/counterup/counterup.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
+  <!-- Back to Top Button -->
+  <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">&#8679;</button>
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ashwin Joseph Kurian</p>
+  </footer>
 
-<!-- Typed.js Initialization -->
-<script type="text/javascript">
-  var typed = new Typed('.typing', {
-    strings: ["Coder", "Developer", "AI Enthusiast","Roboticist","Explorer","Music Lover","Fan of Technology"],
-    loop: true,
-    typeSpeed: 65,
-    backSpeed: 65
-  });
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      const button = document.querySelector('.scroll-to-top');
+      if (window.scrollY > 200) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
