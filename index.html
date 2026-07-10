@@ -164,6 +164,27 @@
     .blip .dot{ animation:none; }
   }
 
+  /* LINE-ART ICONS */
+  .ficon{ width:36px; height:36px; margin-bottom:16px; stroke:var(--accent); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+  .ficon .accent2{ stroke:var(--accent-2); }
+
+  /* DRONE ACCENT */
+  .drone-wrap{
+    position:fixed; top:20px; right:30px; width:74px; height:74px;
+    z-index:15; pointer-events:none; will-change:transform;
+  }
+  .drone-float{ width:100%; height:100%; animation:drone-bob 4.5s ease-in-out infinite; }
+  @keyframes drone-bob{ 0%,100%{ transform:translateY(0) rotate(-2deg); } 50%{ transform:translateY(-8px) rotate(2deg); } }
+  .drone-svg{ width:100%; height:100%; stroke:var(--accent-2); fill:none; stroke-width:2; stroke-linecap:round; }
+  .drone-svg .body{ stroke:var(--accent); }
+  .drone-svg .prop{ transform-box:fill-box; transform-origin:center; animation:prop-spin 1.1s linear infinite; }
+  @keyframes prop-spin{ to{ transform:rotate(360deg); } }
+  @media (max-width:860px){ .drone-wrap{ display:none; } }
+  @media (prefers-reduced-motion: reduce){
+    .drone-float{ animation:none; }
+    .drone-svg .prop{ animation:none; }
+  }
+
   /* SECTIONS */
   section{ padding:64px 0; border-top:1px solid var(--line); }
   .section-head{ margin-bottom:36px; }
@@ -185,6 +206,10 @@
   .tl-num{ font-family:var(--mono); font-size:12px; color:var(--text-faint); padding-top:3px; }
   .tl-role{ font-size:16px; margin-bottom:4px; }
   .tl-org{ font-family:var(--mono); font-size:12.5px; color:var(--accent-2); margin-bottom:8px; }
+  .tl-content{ display:flex; justify-content:space-between; align-items:flex-start; gap:18px; }
+  .tl-icon{ width:34px; height:34px; flex-shrink:0; stroke:var(--accent); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+  .tl-icon .accent2{ stroke:var(--accent-2); }
+  @media (max-width:600px){ .tl-icon{ display:none; } }
   .tl-desc{ color:var(--text-muted); font-size:14.5px; max-width:64ch; }
   .tl-current{
     display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:0.08em;
@@ -292,6 +317,21 @@
 </nav>
 
 <header class="hero">
+  <div class="drone-wrap" id="droneWrap">
+    <div class="drone-float">
+    <svg class="drone-svg" viewBox="0 0 100 100">
+      <line x1="50" y1="50" x2="22" y2="22"/>
+      <line x1="50" y1="50" x2="78" y2="22"/>
+      <line x1="50" y1="50" x2="22" y2="78"/>
+      <line x1="50" y1="50" x2="78" y2="78"/>
+      <rect class="body" x="43" y="43" width="14" height="14" rx="3"/>
+      <g class="prop"><circle cx="22" cy="22" r="10"/><line x1="13" y1="22" x2="31" y2="22"/><line x1="22" y1="13" x2="22" y2="31"/></g>
+      <g class="prop"><circle cx="78" cy="22" r="10"/><line x1="69" y1="22" x2="87" y2="22"/><line x1="78" y1="13" x2="78" y2="31"/></g>
+      <g class="prop"><circle cx="22" cy="78" r="10"/><line x1="13" y1="78" x2="31" y2="78"/><line x1="22" y1="69" x2="22" y2="87"/></g>
+      <g class="prop"><circle cx="78" cy="78" r="10"/><line x1="69" y1="78" x2="87" y2="78"/><line x1="78" y1="69" x2="78" y2="87"/></g>
+    </svg>
+    </div>
+  </div>
   <div class="wrap">
     <div>
       <div class="eyebrow">Signal acquired</div>
@@ -331,7 +371,7 @@
     </div>
     <div class="about">
       <p>I'm a Research Associate at Fraunhofer FHR in Bonn, where I work on radar perception, sensor fusion, and electromagnetic digital twin simulation — building ray-traced radar scenes with NVIDIA Sionna RT to model how automotive and robotic radar systems perceive complex environments before real hardware is involved.</p>
-      <p>My path here runs through two M.Sc. degrees — Robotic Systems Engineering at RWTH Aachen and Computer Science / AI at CUSAT, India — and industry stints at Sony India and Ignitarium, where I shipped AI camera modules on Qualcomm hardware and built real-time defect detection systems. My master's thesis at DLR Neustrelitz focused on Visual-LiDAR SLAM for autonomous waterway navigation.</p>
+      <p>My path here runs through two M.Sc. degrees — Robotic Systems Engineering at RWTH Aachen and Computer Science / AI at CUSAT, India — and industry stints at Sony India and Ignitarium (acquired by Neurealm), where I shipped AI camera modules on Qualcomm hardware and built real-time defect detection systems. My master's thesis at DLR (German Aerospace Center), Neustrelitz focused on Visual-LiDAR SLAM for autonomous waterway navigation.</p>
       <p>I'm drawn to problems where simulation, signal processing, and robot learning intersect — and I'm currently building toward VLA-based manipulation and autonomous navigation research alongside my radar work.</p>
     </div>
   </div>
@@ -346,21 +386,51 @@
     <div class="focus-grid">
       <div class="focus-card">
         <span class="tag">01</span>
+        <svg class="ficon" viewBox="0 0 36 36">
+          <path d="M6 20 A14 14 0 0 1 20 6"/>
+          <path d="M6 20 A9 9 0 0 1 15 11" class="accent2"/>
+          <line x1="6" y1="20" x2="6" y2="30"/>
+          <line x1="2" y1="30" x2="10" y2="30"/>
+          <circle cx="6" cy="20" r="1.6" fill="var(--accent)"/>
+          <line x1="24" y1="24" x2="30" y2="30"/>
+        </svg>
         <h3>Radar Perception &amp; Sensor Fusion</h3>
         <p>Multi-sensor fusion pipelines combining automotive radar, LiDAR, and camera data for semantic 3D mapping and scene understanding.</p>
       </div>
       <div class="focus-card">
         <span class="tag">02</span>
+        <svg class="ficon" viewBox="0 0 36 36">
+          <line x1="18" y1="34" x2="18" y2="16"/>
+          <path d="M11 18 A9 9 0 0 1 25 18"/>
+          <path d="M6 20 A15 15 0 0 1 30 20" class="accent2"/>
+          <circle cx="18" cy="16" r="2" fill="var(--accent)"/>
+        </svg>
         <h3>EM Digital Twin Simulation</h3>
         <p>Ray-traced radar channel simulation with NVIDIA Sionna RT — building warehouse and driving scenes in Isaac Sim, exporting through Blender for physically accurate propagation modeling.</p>
       </div>
       <div class="focus-card">
         <span class="tag">03</span>
+        <svg class="ficon" viewBox="0 0 36 36">
+          <rect x="6" y="18" width="20" height="9" rx="2"/>
+          <circle cx="11" cy="29" r="2.6" class="accent2"/>
+          <circle cx="21" cy="29" r="2.6" class="accent2"/>
+          <line x1="16" y1="18" x2="16" y2="11"/>
+          <circle cx="16" cy="9" r="2"/>
+        </svg>
         <h3>SLAM &amp; Autonomous Navigation</h3>
         <p>Visual-LiDAR SLAM and occupancy mapping for autonomous vehicles, including inland waterway navigation for canal and river environments.</p>
       </div>
       <div class="focus-card">
         <span class="tag">04</span>
+        <svg class="ficon" viewBox="0 0 36 36">
+          <rect x="4" y="26" width="10" height="6" rx="1.5"/>
+          <line x1="9" y1="26" x2="9" y2="19"/>
+          <circle cx="9" cy="19" r="2" class="accent2"/>
+          <line x1="9" y1="19" x2="22" y2="13"/>
+          <circle cx="22" cy="13" r="2" class="accent2"/>
+          <line x1="22" y1="13" x2="30" y2="18"/>
+          <path d="M30 18 L34 15 M30 18 L32 22"/>
+        </svg>
         <h3>Robot Learning</h3>
         <p>Building toward VLA and manipulation research — working through the ETH Zurich Robot Learning curriculum alongside applied radar work.</p>
       </div>
@@ -385,25 +455,52 @@
       </li>
       <li class="tl-item">
         <div class="tl-num">02</div>
-        <div>
-          <div class="tl-role">Master's Thesis — Robotics</div>
-          <div class="tl-org">German Aerospace Center (DLR), Neustrelitz</div>
-          <div class="tl-desc">Semantic 3D mapping for autonomous inland waterway vehicles using Visual-LiDAR SLAM and GNSS/stereo camera/LiDAR fusion. Contributed to the Berlin IWT dataset. Work now forming the basis of a paper submitted to IEEE OJ-ITS.</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-role">Master's Thesis — Robotics</div>
+            <div class="tl-org">German Aerospace Center (DLR), Neustrelitz</div>
+            <div class="tl-desc">Semantic 3D mapping for autonomous inland waterway vehicles using Visual-LiDAR SLAM and GNSS/stereo camera/LiDAR fusion. Work now forming the basis of a paper submitted to IEEE OJ-ITS.</div>
+          </div>
+          <svg class="tl-icon" viewBox="0 0 36 36">
+            <path d="M5 22 Q18 29 31 22 L27 22 Q18 25.5 9 22 Z"/>
+            <line x1="18" y1="22" x2="18" y2="9"/>
+            <circle cx="18" cy="7" r="2" class="accent2"/>
+            <path d="M12 10 A8 8 0 0 1 24 10" class="accent2" stroke-dasharray="2 3"/>
+            <path d="M4 27 Q9 25 14 27 T24 27 T34 27" class="accent2"/>
+          </svg>
         </div>
       </li>
       <li class="tl-item">
         <div class="tl-num">03</div>
-        <div>
-          <div class="tl-role">Consultant — AI (on deputation)</div>
-          <div class="tl-org">Sony India Software Center</div>
-          <div class="tl-desc">Deployed AI-based camera modules for Sony Android devices; built benchmarking pipelines on Qualcomm Snapdragon hardware for image super-resolution, object detection, and white balance correction.</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-role">Consultant — AI (on deputation)</div>
+            <div class="tl-org">Sony India Software Center</div>
+            <div class="tl-desc">Deployed AI-based camera modules for Sony Android devices; built benchmarking pipelines on Qualcomm Snapdragon hardware for image super-resolution, object detection, and white balance correction.</div>
+          </div>
+          <svg class="tl-icon" viewBox="0 0 36 36">
+            <rect x="11" y="11" width="14" height="14" rx="1.5"/>
+            <rect x="15" y="15" width="6" height="6" class="accent2"/>
+            <line x1="14" y1="11" x2="14" y2="6"/>
+            <line x1="18" y1="11" x2="18" y2="6"/>
+            <line x1="22" y1="11" x2="22" y2="6"/>
+            <line x1="14" y1="25" x2="14" y2="30"/>
+            <line x1="18" y1="25" x2="18" y2="30"/>
+            <line x1="22" y1="25" x2="22" y2="30"/>
+            <line x1="11" y1="14" x2="6" y2="14"/>
+            <line x1="11" y1="18" x2="6" y2="18"/>
+            <line x1="11" y1="22" x2="6" y2="22"/>
+            <line x1="25" y1="14" x2="30" y2="14"/>
+            <line x1="25" y1="18" x2="30" y2="18"/>
+            <line x1="25" y1="22" x2="30" y2="22"/>
+          </svg>
         </div>
       </li>
       <li class="tl-item">
         <div class="tl-num">04</div>
         <div>
           <div class="tl-role">Senior Engineer — AI</div>
-          <div class="tl-org">Ignitarium Technology Solutions</div>
+          <div class="tl-org">Ignitarium Technology Solutions (Neurealm)</div>
           <div class="tl-desc">Led predictive maintenance, defect detection, and real-time video analytics for manufacturing and railway safety applications, including a railway joint-bar fault detection system using IR depth cameras.</div>
         </div>
       </li>
@@ -576,7 +673,7 @@
 
 <footer id="contact">
   <div class="wrap">
-    <div class="contact-line">Based in Bonn, Germany — open to conversations on radar, simulation, and robot learning.</div>
+    <div class="contact-line">Based in Bonn, Germany — open to conversations on multi-modal sensor fusion, simulation, digital twins and robot learning.</div>
     <ul class="foot-links">
       <li><a href="mailto:your.email@fraunhofer.de">Email</a></li>
       <li><a href="https://github.com/ashwinjosephk" target="_blank" rel="noopener">GitHub</a></li>
@@ -585,5 +682,39 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var el = document.getElementById('droneWrap');
+  if(!el) return;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking = false;
+
+  function update(){
+    ticking = false;
+    var doc = document.documentElement;
+    var scrollTop = window.scrollY || doc.scrollTop;
+    var maxScroll = Math.max(doc.scrollHeight - window.innerHeight, 1);
+    var progress = Math.min(scrollTop / maxScroll, 1);
+    var travel = window.innerHeight * 0.7;
+    var y = progress * travel;
+    var x = reduceMotion ? 0 : Math.sin(progress * Math.PI * 3) * 16;
+    var fadeStart = 0.9;
+    var opacity = progress > fadeStart ? Math.max(0, 1 - (progress - fadeStart) / (1 - fadeStart)) : 1;
+    el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    el.style.opacity = opacity;
+  }
+
+  function onScroll(){
+    if(!ticking){
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  update();
+})();
+</script>
 </body>
 </html>
