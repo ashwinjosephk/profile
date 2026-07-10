@@ -90,6 +90,12 @@
   .hero-name{ font-size:clamp(34px,5vw,54px); line-height:1.05; margin-bottom:14px; }
   .name-lead{ color:var(--accent); display:block; font-size:1.1em; }
   .name-sub{ color:var(--text-muted); display:block; font-size:0.48em; font-weight:500; letter-spacing:0.03em; margin-top:8px; }
+  .id-row{ display:flex; align-items:center; gap:18px; margin-bottom:14px; }
+  .portrait{
+    width:76px; height:76px; border-radius:50%; object-fit:cover;
+    border:1px solid var(--line); flex-shrink:0;
+    box-shadow:0 0 0 4px var(--bg), 0 0 0 5px var(--line);
+  }
   .hero-role{ font-family:var(--mono); color:var(--text-muted); font-size:16px; margin-bottom:22px; }
   .hero-desc{ color:var(--text-muted); font-size:15.5px; max-width:52ch; margin-bottom:28px; }
   .coords{
@@ -289,7 +295,10 @@
   <div class="wrap">
     <div>
       <div class="eyebrow">Signal acquired</div>
-      <h1 class="hero-name"><span class="name-lead">Ashwin</span><span class="name-sub">Joseph Kurian</span></h1>
+      <div class="id-row">
+        <img class="portrait" src="portrait.png" alt="Ashwin Joseph Kurian">
+        <h1 class="hero-name"><span class="name-lead">Ashwin</span><span class="name-sub">Joseph Kurian</span></h1>
+      </div>
       <div class="hero-role">Research Associate, Radar Perception &amp; Sensor Fusion — Fraunhofer FHR</div>
       <p class="hero-desc">I build the perception stack for autonomous systems — from raw radar returns to semantic 3D maps — and simulate how electromagnetic waves see the world before a single antenna is built.</p>
       <div class="coords">50.6866° N, 7.0966° E — Bonn, Germany · EU Blue Card</div>
