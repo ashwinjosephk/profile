@@ -144,7 +144,7 @@
   .name-sub{ color:var(--text-muted); display:block; font-size:0.48em; font-weight:500; letter-spacing:0.03em; margin-top:8px; }
   .id-row{ display:flex; align-items:center; gap:18px; margin-bottom:14px; }
   .portrait{
-    width:76px; height:76px; border-radius:50%; object-fit:cover;
+    width:176px; height:176px; border-radius:50%; object-fit:cover;
     border:1px solid var(--line); flex-shrink:0;
     box-shadow:0 0 0 4px var(--bg), 0 0 0 5px var(--line);
   }
@@ -392,7 +392,7 @@
         <h1 class="hero-name"><span class="name-lead">Ashwin</span><span class="name-sub">Joseph Kurian</span></h1>
       </div>
       <div class="hero-role">Research Associate, Radar Perception &amp; Sensor Fusion — Fraunhofer FHR</div>
-      <p class="hero-desc">I build the perception stack for autonomous systems — from raw radar returns to semantic 3D maps — and simulate how electromagnetic waves see the world before a single antenna is built.</p>
+      <p class="hero-desc">I contribute to the perception stack for autonomous systems — from semantic 3D maps and simulate how electromagnetic waves see the world before a single antenna is built.</p>
       <div class="coords">50.6866° N, 7.0966° E — Bonn, Germany · EU Blue Card</div>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:josephashwinkurian@gmail.com">Get in touch</a>
@@ -423,8 +423,8 @@
     </div>
     <div class="about">
       <p>I'm a Research Associate at Fraunhofer FHR in Bonn, where I work on radar perception, sensor fusion, and electromagnetic digital twin simulation — building ray-traced radar scenes with NVIDIA Sionna RT to model how automotive and robotic radar systems perceive complex environments before real hardware is involved.</p>
-      <p>My path here runs through two M.Sc. degrees — Robotic Systems Engineering at RWTH Aachen and Computer Science / AI at CUSAT, India — and industry stints at Sony India and Ignitarium, where I shipped AI camera modules on Qualcomm hardware and built real-time defect detection systems. My master's thesis at DLR Neustrelitz focused on Visual-LiDAR SLAM for autonomous waterway navigation.</p>
-      <p>I'm drawn to problems where simulation, signal processing, and robot learning intersect — and I'm currently building toward VLA-based manipulation and autonomous navigation research alongside my radar work.</p>
+      <p>My path here runs through two M.Sc. degrees — Robotic Systems Engineering at RWTH Aachen and Computer Science / AI at CUSAT, India — and industry stints at Sony India and Ignitarium (Neurealm), where I shipped AI camera modules on Qualcomm hardware and built real-time defect detection systems. My master's thesis at DLR Neustrelitz focused on Visual-LiDAR SLAM for autonomous waterway navigation.</p>
+      <p>I'm drawn to problems where simulation, signal processing, and robot learning intersect. I'm currently exploring World Models, VLA-based manipulation and autonomous navigation research in my free time.</p>
     </div>
   </div>
 </section>
@@ -458,7 +458,7 @@
           <circle cx="18" cy="16" r="2" fill="var(--accent)"/>
         </svg>
         <h3>EM Digital Twin Simulation</h3>
-        <p>Ray-traced radar channel simulation with NVIDIA Sionna RT — building warehouse and driving scenes in Isaac Sim, exporting through Blender for physically accurate propagation modeling.</p>
+        <p>Ray-traced radar channel simulation with NVIDIA Sionna RT — building indoor scenes like warehouse in Isaac Sim and Blender, for physically accurate propagation modeling.</p>
       </div>
       <div class="focus-card">
         <span class="tag">03</span>
@@ -470,7 +470,7 @@
           <circle cx="16" cy="9" r="2"/>
         </svg>
         <h3>SLAM &amp; Autonomous Navigation</h3>
-        <p>Visual-LiDAR SLAM and occupancy mapping for autonomous vehicles, including inland waterway navigation for canal and river environments.</p>
+        <p>Visual-LiDAR SLAM and occupancy mapping for autonomous vehicles.</p>
       </div>
       <div class="focus-card">
         <span class="tag">04</span>
@@ -509,9 +509,9 @@
         <div class="tl-num">02</div>
         <div class="tl-content">
           <div>
-            <div class="tl-role">Master's Thesis — Robotics</div>
+            <div class="tl-role">Master's Thesis and Internship — Robotics</div>
             <div class="tl-org">German Aerospace Center (DLR), Neustrelitz</div>
-            <div class="tl-desc">Semantic 3D mapping for autonomous inland waterway vehicles using Visual-LiDAR SLAM and GNSS/stereo camera/LiDAR fusion. Contributed to the Berlin IWT dataset. Work now forming the basis of a paper submitted to IEEE OJ-ITS.</div>
+            <div class="tl-desc">Semantic 3D mapping for autonomous inland waterway vehicles using Visual-LiDAR SLAM and GNSS/stereo camera/LiDAR fusion. Work now forming the basis of a paper submitted to IEEE OJ-ITS.</div>
           </div>
           <svg class="tl-icon" viewBox="0 0 36 36">
             <path d="M5 22 Q18 29 31 22 L27 22 Q18 25.5 9 22 Z"/>
@@ -528,7 +528,7 @@
           <div>
             <div class="tl-role">Consultant — AI (on deputation)</div>
             <div class="tl-org">Sony India Software Center</div>
-            <div class="tl-desc">Deployed AI-based camera modules for Sony Android devices; built benchmarking pipelines on Qualcomm Snapdragon hardware for image super-resolution, object detection, and white balance correction.</div>
+            <div class="tl-desc">Deployed AI-based camera modules for Sony Android devices (Xperia); built benchmarking pipelines on Qualcomm Snapdragon hardware for image super-resolution, object detection, and white balance correction.</div>
           </div>
           <svg class="tl-icon" viewBox="0 0 36 36">
             <rect x="11" y="11" width="14" height="14" rx="1.5"/>
@@ -552,7 +552,7 @@
         <div class="tl-num">04</div>
         <div>
           <div class="tl-role">Senior Engineer — AI</div>
-          <div class="tl-org">Ignitarium Technology Solutions</div>
+          <div class="tl-org">Ignitarium Technology Solutions (Neurealm)</div>
           <div class="tl-desc">Led predictive maintenance, defect detection, and real-time video analytics for manufacturing and railway safety applications, including a railway joint-bar fault detection system using IR depth cameras.</div>
         </div>
       </li>
@@ -577,7 +577,7 @@
 
     <div class="work-feature">
       <h3>Radar Digital Twin Pipeline for Warehouse Environments</h3>
-      <p>An end-to-end pipeline for physically accurate radar simulation: warehouse scenes constructed in Isaac Sim with SimReady assets, exported through Blender 4.2 with the mitsuba-blender addon into Mitsuba XML/PLY format, then ray-traced with NVIDIA Sionna RT. Includes a custom Plotly-based 3D visualizer for path-level analysis by amplitude and angle of departure.</p>
+      <p>An end-to-end pipeline for physically accurate radar simulation: warehouse scenes constructed in Isaac Sim with SimReady assets, then ray-traced with NVIDIA Sionna RT. Includes a custom Plotly-based 3D visualizer for path-level analysis by amplitude and angle of departure.</p>
       <div class="work-tags">
         <span>Sionna RT</span><span>Isaac Sim</span><span>Blender</span><span>Ray Tracing</span><span>Radar Simulation</span>
       </div>
