@@ -1,0 +1,17 @@
+# Ashwin Joseph Kurian
+
+## About
+Ashwin Joseph Kurian also more commonly referred to as Ashwin Joseph is a robotics engineer focused on building multi-modal perception stack for autonomous systems (LiDAR, Radar, IMU, GNSS, Cameras) , Imitation learning, Deep Learning, GEN AI to semantic 3D maps, digital twins and simulation. 
+
+## Website
+https://ashwinjoseph.com
+
+## Projects
+Portfolio of projects, technical writing, and engineering work.
+
+## Profiles
+GitHub:
+https://github.com/ashwinjosephk
+
+LinkedIn:
+https://www.linkedin.com/in/ashwinjoseph
