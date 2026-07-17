@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ashwinjosephk.github.io/sitemap.xml
+Sitemap: https://ashwinjoseph.com/sitemap.xml
