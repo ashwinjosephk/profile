@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashwin Joseph Kurian — Radar Perception, Sensor Fusion & Robotics Research Engineer</title>
 <meta name="description" content="Ashwin Joseph Kurian is a Research Associate at Fraunhofer FHR working on radar perception, sensor fusion, SLAM, and electromagnetic digital twin simulation. Portfolio, projects, and publications.">
+<meta name="author" content="Ashwin Joseph Kurian">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ashwinjosephk.github.io/profile/">
 
@@ -14,6 +15,7 @@
 <meta property="og:description" content="Research Associate at Fraunhofer FHR — radar perception, sensor fusion, SLAM, and electromagnetic digital twin simulation.">
 <meta property="og:url" content="https://ashwinjosephk.github.io/profile/">
 <meta property="og:image" content="https://ashwinjosephk.github.io/profile/portrait.png">
+<meta property="og:image:alt" content="Portrait of Ashwin Joseph Kurian">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ashwin Joseph Kurian — Radar Perception & Robotics">
 <meta name="twitter:description" content="Research Associate at Fraunhofer FHR — radar perception, sensor fusion, SLAM, and electromagnetic digital twin simulation.">
@@ -25,9 +27,11 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Ashwin Joseph Kurian",
+  "alternateName": "Ashwin Joseph",
   "url": "https://ashwinjosephk.github.io/profile/",
   "image": "https://ashwinjosephk.github.io/profile/portrait.png",
   "jobTitle": "Research Associate",
+  "knowsAbout": ["Radar Perception", "Sensor Fusion", "SLAM", "Electromagnetic Digital Twin Simulation", "Robotics", "Computer Vision", "Machine Learning", "Autonomous Navigation"],
   "worksFor": {
     "@type": "Organization",
     "name": "Fraunhofer FHR"
@@ -54,7 +58,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+  gtag('config', 'G-RGZDXQWQH9');
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,18 +146,25 @@
   .hero-name{ font-size:clamp(34px,5vw,54px); line-height:1.05; margin-bottom:14px; }
   .name-lead{ color:var(--accent); display:block; font-size:1.1em; }
   .name-sub{ color:var(--text-muted); display:block; font-size:0.48em; font-weight:500; letter-spacing:0.03em; margin-top:8px; }
-  .id-row{ display:flex; align-items:center; gap:18px; margin-bottom:14px; }
+  .id-row{ display:flex; align-items:center; gap:24px; margin-bottom:16px; }
   .portrait{
     width:176px; height:176px; border-radius:50%; object-fit:cover;
     border:1px solid var(--line); flex-shrink:0;
     box-shadow:0 0 0 4px var(--bg), 0 0 0 5px var(--line);
   }
+  @media (max-width:480px){
+    .id-row{ gap:16px; }
+    .portrait{ width:104px; height:104px; }
+  }
   .hero-role{ font-family:var(--mono); color:var(--text-muted); font-size:16px; margin-bottom:22px; }
   .hero-desc{ color:var(--text-muted); font-size:15.5px; max-width:52ch; margin-bottom:28px; }
   .coords{
     font-family:var(--mono); font-size:12px; color:var(--text-faint);
-    letter-spacing:0.04em; margin-bottom:30px;
+    letter-spacing:0.04em; margin-bottom:22px;
   }
+  .stats-row{ display:flex; flex-wrap:wrap; gap:34px; margin-bottom:30px; }
+  .stat b{ font-family:var(--mono); font-size:19px; font-weight:600; color:var(--accent); display:block; }
+  .stat span{ font-size:12.5px; color:var(--text-muted); }
   .cta-row{ display:flex; flex-wrap:wrap; gap:12px; }
   .btn{
     font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.06em;
@@ -241,7 +252,24 @@
   section{ padding:64px 0; border-top:1px solid var(--line); }
   .section-head{ margin-bottom:36px; }
   .section-title{ font-size:26px; }
+  .about-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:44px; align-items:center; }
+  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; } }
   .about p{ color:var(--text-muted); max-width:68ch; font-size:15.5px; margin-bottom:14px; }
+
+  /* POINT CLOUD CANVAS */
+  .pc-box{ position:relative; width:100%; max-width:380px; margin:0 auto; }
+  .pc-box canvas{ width:100%; height:auto; display:block; }
+  .pc-legend{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px 14px; margin-top:12px;
+    font-family:var(--mono); font-size:10.5px; color:var(--text-muted);
+  }
+  .pc-legend span{ display:inline-flex; align-items:center; gap:5px; }
+  .pc-legend i{ width:7px; height:7px; border-radius:50%; display:inline-block; }
+  .pc-label{
+    text-align:center; margin-top:8px;
+    font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--text-faint);
+  }
 
   /* FOCUS GRID */
   .focus-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
@@ -276,6 +304,14 @@
   }
   .work-feature h3{ font-size:19px; margin-bottom:10px; }
   .work-feature p{ color:var(--text-muted); font-size:14.5px; max-width:70ch; margin-bottom:14px; }
+  .work-shot{
+    width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:3px;
+    margin:6px 0 10px;
+  }
+  .work-shot-caption{
+    font-family:var(--mono); font-size:11.5px; color:var(--text-faint);
+    margin-bottom:16px; max-width:78ch;
+  }
   .work-tags{ display:flex; flex-wrap:wrap; gap:8px; }
   .work-tags span{
     font-family:var(--mono); font-size:11px; color:var(--text-muted);
@@ -313,6 +349,38 @@
     .radar-cone, .track{ animation:none; opacity:0.5; }
   }
 
+  /* SCENE STRIP — land / water / orbit */
+  .scene-strip{ border-top:1px solid var(--line); padding:48px 0 36px; }
+  .scene-svg{ width:100%; height:auto; display:block; stroke-linecap:round; stroke-linejoin:round; }
+  .scene-svg *{ fill:none; }
+  .scene-labels{
+    display:flex; justify-content:space-around; margin-top:10px;
+    font-family:var(--mono); font-size:11px; letter-spacing:0.18em; color:var(--text-faint);
+  }
+  .s-line{ stroke:var(--line); stroke-width:1.5; }
+  .s-road{ stroke:var(--text-faint); stroke-width:1.5; stroke-dasharray:12 14; animation:road-move 1.4s linear infinite; }
+  @keyframes road-move{ to{ stroke-dashoffset:-26; } }
+  .s-car{ stroke:var(--accent); stroke-width:1.6; }
+  .s-wheel{ stroke:var(--accent-2); }
+  .s-lidar{ stroke:var(--accent-2); stroke-width:1.2; stroke-dasharray:3 4; animation:lidar-pulse 2.4s ease-in-out infinite; transform-origin:center; }
+  @keyframes lidar-pulse{ 0%,100%{ opacity:0.25; } 50%{ opacity:0.9; } }
+  .s-wave{ stroke:var(--accent-2); stroke-width:1.2; opacity:0.6; }
+  .s-ship{ stroke:var(--accent); stroke-width:1.6; animation:ship-bob 4s ease-in-out infinite; }
+  @keyframes ship-bob{ 0%,100%{ transform:translateY(0) rotate(0deg); } 50%{ transform:translateY(-4px) rotate(-1deg); } }
+  .s-sat{ stroke:var(--accent); stroke-width:1.5; animation:sat-drift 9s ease-in-out infinite; }
+  .s-sat .panel{ stroke:var(--accent-2); }
+  @keyframes sat-drift{ 0%,100%{ transform:translateX(0); } 50%{ transform:translateX(22px); } }
+  .s-beam{ stroke:var(--accent-2); stroke-width:1; stroke-dasharray:2 6; animation:beam-flow 1.6s linear infinite; opacity:0.55; }
+  @keyframes beam-flow{ to{ stroke-dashoffset:-16; } }
+  .s-pt{ fill:var(--accent-2); stroke:none; animation:pt-blink 3s ease-in-out infinite; }
+  .s-pt.amber{ fill:var(--accent); }
+  .s-pt:nth-of-type(3n){ animation-delay:0.7s; }
+  .s-pt:nth-of-type(3n+1){ animation-delay:1.5s; }
+  @keyframes pt-blink{ 0%,100%{ opacity:0.2; } 50%{ opacity:1; } }
+  @media (prefers-reduced-motion: reduce){
+    .s-road,.s-lidar,.s-ship,.s-sat,.s-beam,.s-pt{ animation:none; }
+  }
+
   /* SKILLS */
   .skill-group{ margin-bottom:22px; }
   .skill-group h4{ font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-faint); margin-bottom:12px; }
@@ -337,13 +405,6 @@
   .edu-card h4{ font-size:14px; margin-bottom:6px; }
   .edu-card p{ color:var(--text-muted); font-size:13px; }
   .edu-card .yr{ font-family:var(--mono); font-size:11.5px; color:var(--text-faint); margin-top:8px; display:block; }
-
-  /* NOW TICKER */
-  .now-list{ list-style:none; }
-  .now-item{ display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--line); font-size:14.5px; }
-  .now-item:first-child{ border-top:none; }
-  .now-item .dot{ width:6px; height:6px; border-radius:50%; background:var(--accent-2); margin-top:7px; flex-shrink:0; box-shadow:0 0 8px var(--accent-2); }
-  .now-item .muted{ color:var(--text-muted); }
 
   footer{ border-top:1px solid var(--line); padding:44px 0; }
   footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
@@ -388,12 +449,17 @@
     <div>
       <div class="eyebrow">Signal acquired</div>
       <div class="id-row">
-        <img class="portrait" src="portrait.png" alt="Ashwin Joseph Kurian">
+        <img class="portrait" src="portrait.png" alt="Portrait of Ashwin Joseph Kurian, radar perception and robotics research engineer in Bonn, Germany">
         <h1 class="hero-name"><span class="name-lead">Ashwin</span><span class="name-sub">Joseph Kurian</span></h1>
       </div>
       <div class="hero-role">Research Associate, Radar Perception &amp; Sensor Fusion — Fraunhofer FHR</div>
-      <p class="hero-desc">I contribute to the perception stack for autonomous systems — from semantic 3D maps and simulate how electromagnetic waves see the world before a single antenna is built.</p>
+      <p class="hero-desc">I contribute to the perception stack for autonomous systems — from radar signal processing to semantic 3D maps — and simulate how electromagnetic waves see the world before a single antenna is built.</p>
       <div class="coords">50.6866° N, 7.0966° E — Bonn, Germany · EU Blue Card</div>
+      <div class="stats-row">
+        <div class="stat"><b>4+ yrs</b><span>AI &amp; robotics, industry + research</span></div>
+        <div class="stat"><b>2× M.Sc.</b><span>Robotics (RWTH) · CS-AI (CUSAT)</span></div>
+        <div class="stat"><b>5 industries</b><span>consumer electronics → aerospace research</span></div>
+      </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:josephashwinkurian@gmail.com">Get in touch</a>
         <a class="btn btn-ghost" href="https://github.com/ashwinjosephk" target="_blank" rel="noopener">GitHub</a>
@@ -421,10 +487,23 @@
       <div class="eyebrow">About</div>
       <h2 class="section-title">Working at the boundary of perception and simulation</h2>
     </div>
-    <div class="about">
-      <p>I'm a Research Associate at Fraunhofer FHR in Bonn, where I work on radar perception, sensor fusion, and electromagnetic digital twin simulation — building ray-traced radar scenes with NVIDIA Sionna RT to model how automotive and robotic radar systems perceive complex environments before real hardware is involved.</p>
-      <p>My path here runs through two M.Sc. degrees — Robotic Systems Engineering at RWTH Aachen and Computer Science / AI at CUSAT, India — and industry stints at Sony India and Ignitarium (Neurealm), where I shipped AI camera modules on Qualcomm hardware and built real-time defect detection systems. My master's thesis at DLR Neustrelitz focused on Visual-LiDAR SLAM for autonomous waterway navigation.</p>
-      <p>I'm drawn to problems where simulation, signal processing, and robot learning intersect. I'm currently exploring World Models, VLA-based manipulation and autonomous navigation research in my free time.</p>
+    <div class="about-grid">
+      <div class="about">
+        <p>I'm a Research Associate at Fraunhofer FHR in Bonn, where I work on radar perception, sensor fusion, and electromagnetic digital twin simulation — building ray-traced radar scenes with NVIDIA Sionna RT to model how automotive and robotic radar systems perceive complex environments before real hardware is involved.</p>
+        <p>My path here runs through two M.Sc. degrees — Robotic Systems Engineering at RWTH Aachen and Computer Science / AI at CUSAT, India — and industry stints at Sony India and Ignitarium (Neurealm), where I shipped AI camera modules on Qualcomm hardware and built real-time defect detection systems. My master's thesis at DLR Neustrelitz focused on Visual-LiDAR SLAM for autonomous waterway navigation.</p>
+        <p>I'm drawn to problems where simulation, signal processing, and robot learning intersect. I'm currently exploring World Models, VLA-based manipulation and autonomous navigation research in my free time. If you're working on radar simulation, multi-sensor perception, or robot learning, I'm always happy to connect.</p>
+      </div>
+      <div class="pc-box">
+        <canvas id="pcCanvas" width="380" height="380" aria-label="Rotating semantic 3D point cloud of an automotive scene, with vehicles, pedestrian, road, building and vegetation in different colors"></canvas>
+        <div class="pc-legend">
+          <span><i style="background:#E3A63A"></i>Vehicle</span>
+          <span><i style="background:#E36BD6"></i>Pedestrian</span>
+          <span><i style="background:#5B6A63"></i>Road</span>
+          <span><i style="background:#4FD8C4"></i>Building</span>
+          <span><i style="background:#7BC96F"></i>Vegetation</span>
+        </div>
+        <div class="pc-label">Semantic point cloud // automotive scene</div>
+      </div>
     </div>
   </div>
 </section>
@@ -499,10 +578,24 @@
     <ul class="timeline">
       <li class="tl-item">
         <div class="tl-num">01</div>
-        <div>
-          <div class="tl-role">Research Associate <span class="tl-current">Current</span></div>
-          <div class="tl-org">Fraunhofer FHR — Bonn, Germany</div>
-          <div class="tl-desc">Multi-dimensional FFT-based radar processing — range-Doppler processing, spatial FFT for angle estimation, windowing, adaptive CFAR detection, and coordinate transforms to generate 3D radar point clouds. Contributing to electromagnetic digital twin development for indoor environments using NVIDIA Sionna RT, Cosmos, and Isaac Sim, and working on radar-based perception with the nuScenes dataset for automotive use cases.</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-role">Research Associate <span class="tl-current">Current</span></div>
+            <div class="tl-org">Fraunhofer FHR — Bonn, Germany</div>
+            <div class="tl-desc">Multi-dimensional FFT-based radar processing — range-Doppler processing, spatial FFT for angle estimation, windowing, adaptive CFAR detection, and coordinate transforms to generate 3D radar point clouds. Contributing to electromagnetic digital twin development for indoor environments using NVIDIA Sionna RT, Cosmos, and Isaac Sim, and working on radar-based perception with the nuScenes dataset for automotive use cases.</div>
+          </div>
+          <svg class="tl-icon" viewBox="0 0 36 36">
+            <line x1="7" y1="29" x2="7" y2="9"/>
+            <line x1="7" y1="29" x2="29" y2="29"/>
+            <line x1="7" y1="29" x2="14" y2="22" stroke-dasharray="2 3"/>
+            <circle cx="15" cy="14" r="1.4" class="accent2" fill="var(--accent-2)"/>
+            <circle cx="20" cy="11" r="1.4" class="accent2" fill="var(--accent-2)"/>
+            <circle cx="24" cy="15" r="1.4" class="accent2" fill="var(--accent-2)"/>
+            <circle cx="18" cy="18" r="1.4" class="accent2" fill="var(--accent-2)"/>
+            <circle cx="25" cy="21" r="1.4" class="accent2" fill="var(--accent-2)"/>
+            <circle cx="13" cy="21" r="1.4" class="accent2" fill="var(--accent-2)"/>
+            <circle cx="21" cy="24" r="1.4" class="accent2" fill="var(--accent-2)"/>
+          </svg>
         </div>
       </li>
       <li class="tl-item">
@@ -550,18 +643,46 @@
       </li>
       <li class="tl-item">
         <div class="tl-num">04</div>
-        <div>
-          <div class="tl-role">Senior Engineer — AI</div>
-          <div class="tl-org">Ignitarium Technology Solutions (Neurealm)</div>
-          <div class="tl-desc">Led predictive maintenance, defect detection, and real-time video analytics for manufacturing and railway safety applications, including a railway joint-bar fault detection system using IR depth cameras.</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-role">Senior Engineer — AI</div>
+            <div class="tl-org">Ignitarium Technology Solutions (Neurealm)</div>
+            <div class="tl-desc">Led predictive maintenance, defect detection, and real-time video analytics for manufacturing and railway safety applications, including a railway joint-bar fault detection system using IR depth cameras. Mentored junior engineers and handled client deployments and executive demos.</div>
+          </div>
+          <svg class="tl-icon" viewBox="0 0 36 36">
+            <line x1="13" y1="4" x2="8" y2="32"/>
+            <line x1="23" y1="4" x2="28" y2="32"/>
+            <line x1="12" y1="10" x2="24" y2="10"/>
+            <line x1="11" y1="17" x2="25" y2="17"/>
+            <line x1="10" y1="24" x2="26" y2="24"/>
+            <line x1="9" y1="31" x2="27" y2="31"/>
+            <path d="M27 6 A6 6 0 0 1 33 12" class="accent2" stroke-dasharray="2 3"/>
+            <path d="M27 2 A10 10 0 0 1 36 12" class="accent2" stroke-dasharray="2 3" opacity="0.6"/>
+          </svg>
         </div>
       </li>
       <li class="tl-item">
         <div class="tl-num">05</div>
-        <div>
-          <div class="tl-role">ML Contractor (on deputation)</div>
-          <div class="tl-org">OpenFive Technologies (SiFive USA)</div>
-          <div class="tl-desc">Ported custom neural networks onto FPGA, optimized models with CEVA LiteML, and ran performance benchmarking for real-world edge deployment.</div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-role">ML Contractor (on deputation)</div>
+            <div class="tl-org">OpenFive Technologies (SiFive USA)</div>
+            <div class="tl-desc">Ported custom neural networks onto FPGA, optimized models with CEVA LiteML, and ran performance benchmarking for real-world edge deployment.</div>
+          </div>
+          <svg class="tl-icon" viewBox="0 0 36 36">
+            <rect x="8" y="8" width="20" height="20" rx="1.5"/>
+            <line x1="15" y1="8" x2="15" y2="28"/>
+            <line x1="21" y1="8" x2="21" y2="28"/>
+            <line x1="8" y1="15" x2="28" y2="15"/>
+            <line x1="8" y1="21" x2="28" y2="21"/>
+            <rect x="15" y="15" width="6" height="6" class="accent2"/>
+            <line x1="12" y1="8" x2="12" y2="4"/>
+            <line x1="18" y1="8" x2="18" y2="4"/>
+            <line x1="24" y1="8" x2="24" y2="4"/>
+            <line x1="12" y1="28" x2="12" y2="32"/>
+            <line x1="18" y1="28" x2="18" y2="32"/>
+            <line x1="24" y1="28" x2="24" y2="32"/>
+          </svg>
         </div>
       </li>
     </ul>
@@ -578,6 +699,8 @@
     <div class="work-feature">
       <h3>Radar Digital Twin Pipeline for Warehouse Environments</h3>
       <p>An end-to-end pipeline for physically accurate radar simulation: warehouse scenes constructed in Isaac Sim with SimReady assets, then ray-traced with NVIDIA Sionna RT. Includes a custom Plotly-based 3D visualizer for path-level analysis by amplitude and angle of departure.</p>
+      <img class="work-shot" src="sionna_pipeline.png" loading="lazy" alt="3D visualization of thousands of simulated radar propagation paths inside a warehouse digital twin, showing specular and diffuse ray paths from a forklift-mounted radar">
+      <div class="work-shot-caption">5,500 simulated propagation paths — specular (yellow) and diffuse (violet) — traced between a forklift-mounted radar and the warehouse environment, rendered in the custom Plotly visualizer.</div>
       <div class="work-tags">
         <span>Sionna RT</span><span>Isaac Sim</span><span>Blender</span><span>Ray Tracing</span><span>Radar Simulation</span>
       </div>
@@ -639,6 +762,7 @@
       <div class="work-card">
         <h4>Humanoid Manipulation Hackathon</h4>
         <p>Dual-cobot humanoid setup on a Franka Emika manipulator — VR teleoperation via Meta Quest 3 and imitation-learning policy training/deployment.</p>
+        <a href="https://www.youtube.com/shorts/HoJ_TBXHlwk" target="_blank" rel="noopener">Watch demo →</a>
       </div>
       <div class="work-card">
         <h4>Generative AI &amp; Synthetic Data</h4>
@@ -723,11 +847,60 @@
   </div>
 </section>
 
+<div class="scene-strip" aria-hidden="true">
+  <div class="wrap">
+    <svg class="scene-svg" viewBox="0 0 800 190">
+      <!-- satellite -->
+      <g class="s-sat">
+        <rect x="380" y="22" width="22" height="14" rx="2"/>
+        <rect x="352" y="25" width="22" height="8" class="panel"/>
+        <rect x="408" y="25" width="22" height="8" class="panel"/>
+        <line x1="391" y1="36" x2="391" y2="42"/>
+      </g>
+      <line class="s-beam" x1="388" y1="44" x2="180" y2="128"/>
+      <line class="s-beam" x1="394" y1="44" x2="612" y2="130"/>
+      <!-- point cloud dots -->
+      <circle class="s-pt" cx="120" cy="96" r="1.8"/>
+      <circle class="s-pt amber" cx="142" cy="82" r="1.8"/>
+      <circle class="s-pt" cx="166" cy="92" r="1.8"/>
+      <circle class="s-pt" cx="238" cy="88" r="1.8"/>
+      <circle class="s-pt amber" cx="256" cy="98" r="1.8"/>
+      <circle class="s-pt" cx="548" cy="92" r="1.8"/>
+      <circle class="s-pt amber" cx="572" cy="84" r="1.8"/>
+      <circle class="s-pt" cx="598" cy="94" r="1.8"/>
+      <circle class="s-pt" cx="662" cy="90" r="1.8"/>
+      <!-- road + autonomous car (left half) -->
+      <line class="s-line" x1="20" y1="152" x2="380" y2="152"/>
+      <line class="s-road" x1="30" y1="145" x2="370" y2="145"/>
+      <g class="s-car">
+        <path d="M150 138 L156 128 L192 128 L200 138 Z"/>
+        <rect x="138" y="138" width="72" height="10" rx="3"/>
+        <circle class="s-wheel" cx="154" cy="150" r="5"/>
+        <circle class="s-wheel" cx="194" cy="150" r="5"/>
+        <line x1="174" y1="128" x2="174" y2="120"/>
+        <circle cx="174" cy="118" r="2" class="s-wheel"/>
+      </g>
+      <path class="s-lidar" d="M158 112 A20 20 0 0 1 190 112"/>
+      <path class="s-lidar" d="M148 104 A32 32 0 0 1 200 104" style="animation-delay:0.8s"/>
+      <!-- water + autonomous ship (right half) -->
+      <path class="s-wave" d="M420 156 Q440 150 460 156 T500 156 T540 156 T580 156 T620 156 T660 156 T700 156 T740 156 T780 156"/>
+      <g class="s-ship">
+        <path d="M560 142 L664 142 L650 154 L574 154 Z"/>
+        <rect x="596" y="130" width="32" height="12" rx="2"/>
+        <line x1="612" y1="130" x2="612" y2="118"/>
+        <circle cx="612" cy="116" r="2" class="s-wheel"/>
+      </g>
+      <path class="s-lidar" d="M596 108 A20 20 0 0 1 628 108"/>
+    </svg>
+    <div class="scene-labels"><span>LAND</span><span>ORBIT</span><span>WATER</span></div>
+  </div>
+</div>
+
 <footer id="contact">
   <div class="wrap">
-    <div class="contact-line">Based in Bonn, Germany — open to conversations on radar, simulation, and robot learning.</div>
+    <div class="contact-line">Ashwin Joseph Kurian · Bonn, Germany — open to conversations on radar, simulation, and robot learning.</div>
     <ul class="foot-links">
-      <li><a href="mailto:your.email@fraunhofer.de">Email</a></li>
+      <li><a href="mailto:josephashwinkurian@gmail.com">Email</a></li>
       <li><a href="https://github.com/ashwinjosephk" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/ashwinjoseph" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
@@ -766,6 +939,138 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('resize', onScroll);
   update();
+})();
+
+/* Rotating semantic 3D point cloud — automotive scene, per-class colors */
+(function(){
+  var canvas = document.getElementById('pcCanvas');
+  if(!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W = canvas.width, H = canvas.height;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var COLORS = {
+    vehicle:    '227,166,58',   // amber
+    pedestrian: '227,107,214',  // magenta
+    road:       '91,106,99',    // faint gray-green
+    building:   '79,216,196',   // teal
+    veg:        '123,201,111',  // green
+    trunk:      '141,110,82'    // brown
+  };
+
+  var pts = [];
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+
+  // road plane (y=0), lane area
+  for(var i=0;i<320;i++){
+    pts.push({x:rnd(-4,4), y:0, z:rnd(-1.4,1.4), c:'road', s:1});
+  }
+  // ego vehicle: box cluster at center
+  for(i=0;i<130;i++){
+    var top = Math.random()<0.35;
+    pts.push({
+      x:rnd(-0.75,0.75), 
+      y: top ? rnd(0.45,0.7) : rnd(0.05,0.45),
+      z: top ? rnd(-0.25,0.25) : rnd(-0.4,0.4),
+      c:'vehicle', s:1.2
+    });
+  }
+  // second vehicle, ahead-right
+  for(i=0;i<110;i++){
+    var top2 = Math.random()<0.35;
+    pts.push({
+      x:2.3 + rnd(-0.7,0.7),
+      y: top2 ? rnd(0.42,0.65) : rnd(0.05,0.42),
+      z: 0.7 + (top2 ? rnd(-0.22,0.22) : rnd(-0.36,0.36)),
+      c:'vehicle', s:1.2
+    });
+  }
+  // pedestrian: vertical cluster, left of road
+  for(i=0;i<55;i++){
+    var a = Math.random()*Math.PI*2, r = 0.13*Math.sqrt(Math.random());
+    pts.push({
+      x:-1.9 + r*Math.cos(a),
+      y:rnd(0,0.95),
+      z:1.15 + r*Math.sin(a),
+      c:'pedestrian', s:1.3
+    });
+  }
+  // building: wall behind road
+  for(i=0;i<200;i++){
+    pts.push({x:rnd(-3.9,3.9), y:rnd(0,2.1), z:-2.3 + rnd(-0.12,0.12), c:'building', s:1});
+  }
+  // tree: canopy sphere + trunk
+  for(i=0;i<110;i++){
+    var u=Math.random(), v=Math.random();
+    var th=2*Math.PI*u, ph=Math.acos(2*v-1), rr=0.55*Math.cbrt(Math.random());
+    pts.push({
+      x:-3.1 + rr*Math.sin(ph)*Math.cos(th),
+      y:1.25 + rr*Math.cos(ph)*0.8,
+      z:1.5 + rr*Math.sin(ph)*Math.sin(th),
+      c:'veg', s:1.1
+    });
+  }
+  for(i=0;i<20;i++){
+    pts.push({x:-3.1+rnd(-0.05,0.05), y:rnd(0,0.75), z:1.5+rnd(-0.05,0.05), c:'trunk', s:1.1});
+  }
+
+  var angY = 0.6;
+  var tiltX = 0.42; // fixed camera tilt from above
+  var running = true;
+
+  function render(){
+    ctx.clearRect(0, 0, W, H);
+    var cy = Math.cos(angY), sy = Math.sin(angY);
+    var cx = Math.cos(tiltX), sx = Math.sin(tiltX);
+    var scale = 42, fov = 9;
+    var proj = [];
+    for(var i=0; i<pts.length; i++){
+      var pt = pts[i];
+      // rotate scene around Y
+      var x1 = pt.x * cy - pt.z * sy;
+      var z1 = pt.x * sy + pt.z * cy;
+      // fixed camera tilt around X (y up)
+      var y1 = pt.y * cx - z1 * sx;
+      var z2 = pt.y * sx + z1 * cx;
+      var persp = fov / (fov + z2);
+      proj.push({
+        sx: W/2 + x1 * scale * persp,
+        sy: H*0.60 - y1 * scale * persp,
+        z: z2, persp: persp, c: pt.c, s: pt.s
+      });
+    }
+    proj.sort(function(a,b){ return b.z - a.z; });
+    for(var j=0; j<proj.length; j++){
+      var d = proj[j];
+      var alpha = Math.max(0.14, Math.min(0.95, 0.7 * d.persp * d.persp));
+      var size = Math.max(0.6, 1.7 * d.s * d.persp);
+      ctx.fillStyle = 'rgba(' + COLORS[d.c] + ',' + alpha + ')';
+      ctx.beginPath();
+      ctx.arc(d.sx, d.sy, size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function tick(){
+    if(!running) return;
+    angY += 0.004;
+    render();
+    requestAnimationFrame(tick);
+  }
+
+  if(reduceMotion){
+    render(); // single static frame
+  } else if('IntersectionObserver' in window){
+    var started = false;
+    var io = new IntersectionObserver(function(entries){
+      running = entries[0].isIntersecting;
+      if(running && !started){ started = true; tick(); }
+      else if(running){ tick(); }
+    }, {threshold: 0.05});
+    io.observe(canvas);
+  } else {
+    tick();
+  }
 })();
 </script>
 </body>
